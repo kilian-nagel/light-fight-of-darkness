@@ -15,7 +15,7 @@ let app = express();
 =============== */
 
 
-app.use(express.urlencoded({extended:false}));
+app.use(express.static(__dirname));
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
@@ -85,7 +85,7 @@ app.post('/login',(req,res)=>{
                     res.status(200).send('connected');
                 }
                 else {
-                    res.status(400).send('oooof')
+                    res.status(400).send('Incorrect password or username')
                 }
             }
             catch {
