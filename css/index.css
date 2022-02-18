@@ -7,3 +7,71 @@
     margin:0;
     padding:0;
 }
+
+/* General vars 
+=============== */
+
+:root {
+
+}
+
+/* Navigation
+=============== */
+
+.navigation {
+    width:100%;
+    padding:1.5rem;
+}
+
+.navigation-container {
+    max-width:1250px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-logo {
+    display:hidden;
+}
+
+.navigation-icon {
+
+}
+
+/* Home hero
+=============== */
+
+.home-hero {
+    width:100%; 
+    background: url("../images/home-hero.png") center center/cover;
+}
+
+.home-hero__header {
+    padding:1.5rem;
+    width:100%;
+    border-bottom: solid 10px white;
+}
+
+.home-hero__title {
+    text-align: center;
+}
+
+.home-hero-showcase {
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    padding:3rem 1.5rem;
+}
+
+.home-hero__img {
+    max-width:90%;
+    width:300px;
+    height:auto;
+    margin-bottom:3rem auto;
+}
+
+.home-hero__btn {
+    padding:0.5rem 0.325rem;
+    background-color: white;
+}
