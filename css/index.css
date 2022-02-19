@@ -7,21 +7,31 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: "Sedan";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { /* Temporary */
+    height:1000vh;
 }
 
 /* General vars 
 =============== */
 
-:root {
-
+@font-face {
+    font-family: "Sedan";
+    src: url("../font/Sedan-Regular.woff");
 }
 
 /* Navigation
 =============== */
 
 .navigation {
-    width:100%;
-    padding:1.5rem;
+    max-width:100%;
+    padding:1.5em;
 }
 
 .navigation-container {
@@ -33,46 +43,111 @@
 }
 
 .navigation-logo {
-    display:hidden;
+    visibility: hidden;
 }
 
 .navigation-icon {
+    width:32px;
+}
 
+.navigation-icon-bar {
+    background-color: white;
+    height:1px;
+}
+
+.navigation-icon-bar:nth-child(1){
+    margin-bottom: 10px;
+}
+
+.navigation-icon-bar:nth-child(2){
+    margin-bottom: 10px;
 }
 
 /* Home hero
 =============== */
 
-.home-hero {
-    width:100%; 
-    background: url("../images/home-hero.png") center center/cover;
+.home-hero-wrapper {
+    min-height:100vh;
+    max-height:800px;
+    display:flex;
+    align-items: center;
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url("../images/home-hero.png");
+    background-size:cover;
 }
 
-.home-hero__header {
-    padding:1.5rem;
+.home-hero {
     width:100%;
-    border-bottom: solid 10px white;
+    padding:0 1.25rem; 
+}
+/*
+.overlay{
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+}*/
+
+.home-hero__header { /* Overflow issue*/
+    padding:2.75em 0 0 0;
+    /*border-bottom: solid 10px white;*/
+    width:100%;
 }
 
 .home-hero__title {
     text-align: center;
+    font-size:3rem;
+    color:white;
+    font-weight:400;
 }
 
 .home-hero-showcase {
-    width:100vw;
+    width:100%;
     display:flex;
     flex-direction: column;
-    padding:3rem 1.5rem;
+    align-items: center;
 }
 
-.home-hero__img {
+.home-hero__text {
+    width:600px;
     max-width:90%;
-    width:300px;
-    height:auto;
-    margin-bottom:3rem auto;
+    padding:2em 0;
+    color:white;
+    font-size: 1.25rem;
+    font-weight:400;
 }
 
 .home-hero__btn {
-    padding:0.5rem 0.325rem;
+    padding:0.325em 0.5em;
+    outline:none;
+    border:none;
     background-color: white;
+    font-size:1.5rem;
+    margin-bottom:2em;
+}
+
+/* Test
+=============== */
+
+.adventure {
+    height:400px;
+}
+
+.adventure-aside-navbar {
+    transform: translate(50%,-50%);
+    position:fixed;
+    top:50%;
+    margin-left:2rem;
+}
+
+.adventure-navbar-bubble {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    font-size:1.5rem;
+    background-color:rgba(0,0,0,0.25);
+}
+
+.adventure-navbar-bubble:nth-child(1),.adventure-navbar-bubble:nth-child(2){
+    margin-bottom:1rem;
 }

@@ -1,0 +1,4 @@
+
+Aside ( page entière ) =
+Barre verticale similaire à Github +
+icones de nav ( Types bulles ).

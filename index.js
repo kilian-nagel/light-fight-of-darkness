@@ -1,5 +1,5 @@
 
-let db = require('./db.json');
+let db = require('./js/db.json');
 let bodyParser = require('body-parser');
 let bcrypt = require('bcrypt');
 let fs = require('fs');
