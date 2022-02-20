@@ -1,0 +1,35 @@
+
+
+.fs-title {
+    font-size:3rem;
+}
+.fs-subtitle {
+    font-size:2rem;
+}
+.fs-text {
+    font-size:1.25rem;
+}
+
+@media screen and (max-width:1024px){
+    .fs-title {
+        font-size:2.5rem;
+    }
+    .fs-subtitle {
+        font-size:1.75rem;
+    }
+    .fs-text {
+        font-size:1.125rem;
+    }
+}
+
+@media screen and (max-width:640px){
+    .fs-title {
+        font-size:1.8rem;
+    }
+    .fs-subtitle {
+        font-size:1.4rem;
+    }
+    .fs-text {
+        font-size:1rem;
+    }
+}

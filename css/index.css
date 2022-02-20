@@ -1,4 +1,7 @@
 
+/* TODO : 
+- Fix navbar bubbles appearing during page load
+*/
 
 /* Normalize 
 =============== */
@@ -14,16 +17,20 @@ html {
     scroll-behavior: smooth;
 }
 
-body { /* Temporary */
-    height:1000vh;
-}
-
 /* General vars 
 =============== */
 
 @font-face {
     font-family: "Sedan";
     src: url("../font/Sedan-Regular.woff");
+}
+
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width:1250px;
+    margin:0 auto;
 }
 
 /* Navigation
@@ -71,7 +78,7 @@ body { /* Temporary */
     max-height:800px;
     display:flex;
     align-items: center;
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url("../images/home-hero.png");
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("../images/home-hero.png");
     background-size:cover;
 }
 
@@ -93,7 +100,6 @@ body { /* Temporary */
 
 .home-hero__title {
     text-align: center;
-    font-size:3rem;
     color:white;
     font-weight:400;
 }
@@ -110,7 +116,6 @@ body { /* Temporary */
     max-width:90%;
     padding:2em 0;
     color:white;
-    font-size: 1.25rem;
     font-weight:400;
 }
 
@@ -119,18 +124,20 @@ body { /* Temporary */
     outline:none;
     border:none;
     background-color: white;
-    font-size:1.5rem;
     margin-bottom:2em;
+    font-size:1.5rem;
 }
 
-/* Test
+/* Adventure
 =============== */
 
 .adventure {
-    height:400px;
+    color:black;
+    padding:5em 1.25em;
 }
 
 .adventure-aside-navbar {
+    display:none;
     transform: translate(50%,-50%);
     position:fixed;
     top:50%;
@@ -138,16 +145,97 @@ body { /* Temporary */
 }
 
 .adventure-navbar-bubble {
+    height:3rem;
+    width:3rem;
     display:flex;
     justify-content: center;
     align-items: center;
-    height:3rem;
-    width:3rem;
     border-radius: 50%;
-    font-size:1.5rem;
     background-color:rgba(0,0,0,0.25);
 }
 
 .adventure-navbar-bubble:nth-child(1),.adventure-navbar-bubble:nth-child(2){
     margin-bottom:1rem;
+}
+
+.adventure-container {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1250px;
+    margin:0 auto;
+}
+
+.adventure-description {
+    width:600px;
+    max-width:90%;
+}
+
+.adventure__img {
+    max-width:90%;
+    width:300px;
+    height:auto;
+}
+
+/* discover
+=============== */
+
+.discover {
+    color:white;
+    padding:5em 1.25em;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('../images/secrets-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.discover-description__title {
+}
+
+.discover-description__text {
+    width:600px;
+    max-width:90%;
+}
+
+.discover-container {
+    max-width:1250px;
+    margin:0 auto;
+}
+
+.discover__img {
+    width:300px;
+    height:auto;
+    max-width:90%;
+}
+
+/* Fight
+=============== */
+
+.fight {
+    color:black;
+    padding:5em 1.25em;
+}
+
+.fight-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fight-description__title {
+}
+
+.fight-description__text {
+}
+
+.fight-description {
+    width:600px;
+    max-width:90%;
+}
+
+.fight__img {
+    width:300px;
+    height:auto;
+    max-width:90%;
 }
