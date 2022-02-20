@@ -33,6 +33,11 @@ html {
     margin:0 auto;
 }
 
+.website-wrapper {
+    width:100%;
+    max-width:100%;
+}
+
 /* Navigation
 =============== */
 
@@ -181,8 +186,7 @@ html {
     background-position: center;
 }
 
-
-.discover-description__text {
+.discover-description {
     width:600px;
     max-width:90%;
 }
@@ -218,7 +222,13 @@ html {
 
 @media screen and (max-width:1024px){
     .container {
+        max-width:100vw;
         flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
         gap:2rem;
+    }
+    .adventure-description , .discover-description , .fight-description {
+        margin:0 auto;
     }
 }
