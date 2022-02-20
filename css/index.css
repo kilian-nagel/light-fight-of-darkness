@@ -158,15 +158,6 @@ html {
     margin-bottom:1rem;
 }
 
-.adventure-container {
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width:1250px;
-    margin:0 auto;
-}
-
 .adventure-description {
     width:600px;
     max-width:90%;
@@ -190,17 +181,10 @@ html {
     background-position: center;
 }
 
-.discover-description__title {
-}
 
 .discover-description__text {
     width:600px;
     max-width:90%;
-}
-
-.discover-container {
-    max-width:1250px;
-    margin:0 auto;
 }
 
 .discover__img {
@@ -217,11 +201,6 @@ html {
     padding:5em 1.25em;
 }
 
-.fight-container {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .fight-description {
     width:600px;
@@ -241,7 +220,4 @@ html {
     .container {
         flex-direction: column;
     }
-}
-{
-    
 }
