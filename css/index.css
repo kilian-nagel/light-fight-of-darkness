@@ -223,12 +223,6 @@ html {
     align-items: center;
 }
 
-.fight-description__title {
-}
-
-.fight-description__text {
-}
-
 .fight-description {
     width:600px;
     max-width:90%;
@@ -238,4 +232,13 @@ html {
     width:300px;
     height:auto;
     max-width:90%;
+}
+
+/* RESPONSIVE 
+=============== */
+
+@media screen and(max-width:1024px){
+    .container {
+        flex-direction: column;
+    }
 }
