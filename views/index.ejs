@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/font.css" type="text/css">
+    <script src="https://kit.fontawesome.com/618a2644fe.js" crossorigin="anonymous"></script>
     <title>LFD</title>
 </head>
 <body>
     <div class="website-wrapper">
         <div class="home-hero-wrapper">
+            <nav class="mobile-navbar">
+                <i class="fas fa-times mobile-navbar__quit-btn"></i>
+                <h2 class="mobile-navbar__title">
+                    Navigation
+                </h2>
+                <ul class="mobile-navbar__items">
+                    <li class="mobile-navbar__item"><a href="https://light-fight-of-darkness.herokuapp.com" class="mobile-navbar__link">Accueil</a></li>
+                    <li class="mobile-navbar__item"><a href="/register" class="mobile-navbar__link">S'inscrire</a></li>
+                    <li class="mobile-navbar__item"><a href="/login" class="mobile-navbar__link">Se connecter</a></li>
+                    <li class="mobile-navbar__item"><a href="/contact" class="mobile-navbar__link">Contact</a></li>
+                </ul>
+            </nav>
             <section class="home-hero">
                 <nav class="navigation">
                     <div class="navigation-container">
@@ -25,9 +38,9 @@
                     <h1 class="home-hero__title fs-title">Light Fight of Darkness</h1>
                 </header>
                 <div class="home-hero-showcase">
-                    <p class="home-hero__text fs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad fugit quas accusamus, illum reprehenderit doloremque excepturi sunt, quia eos at provident quisquam ipsam voluptates tempora aspernatur non ipsa quod?</p>
+                    <p class="home-hero__text fs-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad fugit quas accusamus, illum reprehenderit doloremque excepturi sunt, quia eos at provident quisquam ipsam voluptates tempora aspernatur non ipsa quod?</p>
                     <div class="home-hero-btn-container">
-                        <button class="home-hero__btn btn">Inscris-toi !</button>
+                        <button class="home-hero__btn btn" href="/download">Installer</button>
                     </div>
                 </div>
             </section>
@@ -41,7 +54,7 @@
             <div class="adventure-container container">
                 <div class="adventure-description">
                     <h2 class="adventure-description__title fs-title">Embarquez dans l'aventure.</h2>
-                    <p class="adventure-description__text fs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae ullam distinctio, rem velit repellendus quidem culpa iste voluptatem ab, neque suscipit. Nobis perspiciatis minima praesentium nisi dolore voluptatum dolorem.</p>
+                    <p class="adventure-description__text fs-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae ullam distinctio, rem velit repellendus quidem culpa iste voluptatem ab, neque suscipit. Nobis perspiciatis minima praesentium nisi dolore voluptatum dolorem.</p>
                 </div>
                 <img class="adventure__img" alt="adventure image" src="../images/adventure.png">
             </div>
@@ -51,7 +64,7 @@
                 <img src="../images/discover.png" alt="image of the discover" class="discover__img">
                 <div class="discover-description">
                     <h2 class="discover-description__title fs-title">Décrouvrez les mystères.</h2>
-                    <p class="discover-description__text fs-text">
+                    <p class="discover-description__text fs-text text">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, repellat explicabo. Voluptatum delectus modi cupiditate hic eum. Unde consectetur ex possimus, molestiae ullam tempore quae corrupti aliquam, illum quasi repellat?
                     </p>
                 </div>
@@ -59,12 +72,34 @@
         <section class="fight">
             <div class="fight-container container">
                 <div class="fight-description">
-                    <h2 class="fight-description__title fs-title">Combattez pour les forces du mal/bien.</h2>
-                    <p class="fight-description__text fs-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi explicabo facere nostrum, odit, eos, nobis quidem architecto velit delectus nihil nesciunt aliquid doloribus ipsum maiores. Molestiae laudantium iste eveniet labore?</p>
+                    <h2 class="fight-description__title fs-title">Combattez pour les forces du mal.</h2>
+                    <p class="fight-description__text fs-text text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi explicabo facere nostrum, odit, eos, nobis quidem architecto velit delectus nihil nesciunt aliquid doloribus ipsum maiores. Molestiae laudantium iste eveniet labore?</p>
                 </div>
                 <img src="../images/fight.png" alt="image of fighting" class="fight__img">
             </div>
-        </section>                    
+        </section>
+        <hr style="color:rgb(38 88 39)">
+        <footer class="footer">
+            <h3 class="footer__title fs-title">LFD</h3>
+            <ul class="footer-items">
+                <li class="footer-item fs-text">Produit</li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">Jeux</a></li>
+                <li class="footer-item"><a href="" class="footer__link fs-text"></a></li>
+                <li class="footer-item"><a href="" class="footer__link fs-text"></a></li>
+            </ul>
+            <ul class="footer-items">
+                <li class="footer-item fs-text">Communauté</li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">Forums</a></li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">Assistance</a></li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">Commentaires</a></li>
+            </ul>
+            <ul class="footer-items">
+                <li class="footer-item fs-text">Développeurs</li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">A propos</a></li>
+                <li class="footer-item"><a href="mailto:nagelkilian05@gmail.com" class="footer__link fs-text">Contact</a></li>
+                <li class="footer-item"><a href="" class="footer__link fs-text">Github</a></li>
+            </ul>
+        </footer>                
     </div>
    
         <!--
@@ -81,7 +116,7 @@
             <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by max.icons - Flaticon</a>
         </footer>
         -->
-    <script src="https://kit.fontawesome.com/618a2644fe.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
     </div>
 </body>
 </html>
