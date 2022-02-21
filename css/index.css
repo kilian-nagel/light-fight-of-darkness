@@ -43,6 +43,16 @@ html {
     line-height: 1.625;
 }
 
+.title {
+    margin-bottom:40px;
+}
+
+@media screen and (max-width:780px){
+    .title {
+        margin-bottom:24px
+    }
+}
+
 /* Full screen overlay 
 =============== */
 
@@ -155,7 +165,7 @@ html {
 .home-hero__text {
     width:780px;
     max-width:90%;
-    padding:2em 0;
+    padding-bottom: 2rem;
     color:white;
     font-weight:400;
 }
@@ -277,6 +287,12 @@ html {
 /* RESPONSIVE 
 =============== */
 
+@media screen and (max-width:1250px){
+    .home-hero__text {
+        width:696px;
+    }
+}
+
 @media screen and (max-width:1024px){
     .container {
         max-width:100vw;
@@ -287,6 +303,9 @@ html {
     }
     .adventure-description , .discover-description , .fight-description ,.adventure__img,.discover__img,.fight__img {
         margin:0 auto;
+    }
+    .home-hero__text {
+        width:552px;
     }
 }
 
