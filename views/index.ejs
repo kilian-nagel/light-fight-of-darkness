@@ -11,74 +11,102 @@
 </head>
 <body>
     <div class="website-wrapper">
-        <div class="home-hero-wrapper">
-            <nav class="mobile-navbar">
+        <div class="home-hero-wrapper padding-large">
+
+            <div class="mobile-navbar">
                 <i class="fas fa-times mobile-navbar__quit-btn"></i>
+                
                 <h2 class="mobile-navbar__title">
                     Navigation
                 </h2>
+
                 <ul class="mobile-navbar__items">
                     <li class="mobile-navbar__item"><a href="https://light-fight-of-darkness.herokuapp.com" class="mobile-navbar__link">Accueil</a></li>
                     <li class="mobile-navbar__item"><a href="/register" class="mobile-navbar__link">S'inscrire</a></li>
                     <li class="mobile-navbar__item"><a href="/login" class="mobile-navbar__link">Se connecter</a></li>
                     <li class="mobile-navbar__item"><a href="/contact" class="mobile-navbar__link">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
+
             <section class="home-hero">
-                <nav class="navigation">
+
+                <div class="navigation-wrapper padding-small">
                     <div class="navigation-container">
                         <h2 class="navigation-logo fs-text">LFD</h2>
                         <div class="navigation-icon">
                             <div class="navigation-icon-bar"></div>
                             <div class="navigation-icon-bar"></div>
                             <div class="navigation-icon-bar"></div>
-                     </div>
-                </nav>
-                <header class="home-hero__header">
-                    <h1 class="home-hero__title fs-title title">Light Fight of Darkness</h1>
-                </header>
-                <div class="home-hero-showcase">
-                    <p class="home-hero__text fs-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad fugit quas accusamus, illum reprehenderit doloremque excepturi sunt, quia eos at provident quisquam ipsam voluptates tempora aspernatur non ipsa quod?</p>
-                    <div class="home-hero-btn-container">
-                        <button class="home-hero__btn btn" href="/download">Installer</button>
                     </div>
                 </div>
-            </section>
+
+                <header class="home-hero__header">
+                    <h1 class="home-hero__title fs-header title">Light Fight of Darkness</h1>
+                </header>
+
+                <div class="home-hero-showcase">
+                    <p class="home-hero__text fs-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ad fugit quas accusamus, illum reprehenderit doloremque excepturi sunt, quia eos at provident quisquam ipsam voluptates tempora aspernatur non ipsa quod?</p>
+                    <div class="home-hero-qualities max-width-lg">
+                        <div class="home-hero-quality">
+                            <h3 class="home-hero-quality__title">2D Classique</h3>
+                            <p class="home-hero-quality__text fs-text">Redécouvrez le style 2D.</p>
+                        </div>
+                        <div class="home-hero-quality">
+                            <h3 class="home-hero-quality__title">Rpg</h3>
+                            <p class="home-hero-quality__text fs-text">Un jeu type rpg.</p>
+                        </div>
+                        <div class="home-hero-quality">
+                            <h3 class="home-hero-quality__title">Quêtes</h3>
+                            <p class="home-hero-quality__text fs-text">Un système de quêtes</p>
+                        </div>
+                    </div>
+                    <div class="home-hero-btn-container">
+                        <button class="home-hero__btn btn" href="/download">Téléchargez</button>
+                    </div>
+                </div>
+
+            </section>  
+              
         </div>
+
         <section class="adventure">
             <nav class="adventure-aside-navbar">
                 <div class="adventure-navbar-bubble">1</div>
                 <div class="adventure-navbar-bubble">2</div>
                 <div class="adventure-navbar-bubble">3</div>
             </nav>
-            <div class="adventure-container container">
+            <div class="adventure-container container padding-container">
                 <div class="adventure-description">
                     <h2 class="adventure-description__title fs-title title">Embarquez dans l'aventure.</h2>
-                    <p class="adventure-description__text fs-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae ullam distinctio, rem velit repellendus quidem culpa iste voluptatem ab, neque suscipit. Nobis perspiciatis minima praesentium nisi dolore voluptatum dolorem.</p>
+                    <p class="adventure-description__text fs-text text margin-top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae ullam distinctio, rem velit repellendus quidem culpa iste voluptatem ab, neque suscipit. Nobis perspiciatis minima praesentium nisi dolore voluptatum dolorem.</p>
                 </div>
                 <img class="adventure__img" alt="adventure image" src="../images/adventure.png">
             </div>
         </section>
+
         <section class="discover">
-            <div class="discover-container container">
+            <div class="discover-container container padding-container">
                 <img src="../images/discover.png" alt="image of the discover" class="discover__img">
                 <div class="discover-description">
                     <h2 class="discover-description__title fs-title title">Décrouvrez les mystères.</h2>
-                    <p class="discover-description__text fs-text text">
+                    <p class="discover-description__text fs-text text margin-top">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, repellat explicabo. Voluptatum delectus modi cupiditate hic eum. Unde consectetur ex possimus, molestiae ullam tempore quae corrupti aliquam, illum quasi repellat?
                     </p>
                 </div>
         </section>
+
         <section class="fight">
-            <div class="fight-container container">
+            <div class="fight-container container padding-container">
                 <div class="fight-description">
                     <h2 class="fight-description__title fs-title title">Combattez contre les forces du mal.</h2>
-                    <p class="fight-description__text fs-text text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi explicabo facere nostrum, odit, eos, nobis quidem architecto velit delectus nihil nesciunt aliquid doloribus ipsum maiores. Molestiae laudantium iste eveniet labore?</p>
+                    <p class="fight-description__text fs-text text margin-top">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi explicabo facere nostrum, odit, eos, nobis quidem architecto velit delectus nihil nesciunt aliquid doloribus ipsum maiores. Molestiae laudantium iste eveniet labore?</p>
                 </div>
                 <img src="../images/fight.png" alt="image of fighting" class="fight__img">
             </div>
         </section>
+
         <hr style="color:rgb(38 88 39)">
+
         <footer class="footer">
             <h3 class="footer__title fs-title">LFD</h3>
             <ul class="footer-items">
@@ -99,7 +127,8 @@
                 <li class="footer-item"><a href="mailto:nagelkilian05@gmail.com" class="footer__link fs-text">Contact</a></li>
                 <li class="footer-item"><a href="" class="footer__link fs-text">Github</a></li>
             </ul>
-        </footer>                
+        </footer> 
+
     </div>
    
         <!--
