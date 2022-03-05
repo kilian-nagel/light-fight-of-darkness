@@ -1,10 +1,10 @@
 
-let db = require('./js/db.json');
-let bodyParser = require('body-parser');
+let express = require('express');
 let bcrypt = require('bcrypt');
 let fs = require('fs');
-let express = require('express');
-let app = express();
+let body_parser = require('body-parser');
+let db = require('./js/db.json');
+
 
 /* General functions
 ================ */
@@ -14,12 +14,12 @@ let app = express();
 /* App
 =============== */
 
-
-app.use(express.static(__dirname));
+let app = express();
+app.use(body_parser.urlencoded({extended:false}));
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    res.render('index.ejs',{text:'Welcome'});
+    res.render('index.ejs');
 })
 
 app.get('/register',(req,res)=>{
@@ -30,15 +30,17 @@ app.get('/login',(req,res)=>{
     res.render('login.ejs');
 })
 
-app.post('/register',(req,res)=>{
-    fs.readFile('./db.json','utf-8',(err,data)=>{
+app.post('/create',(req,res)=>{
+    /*
+    fs.readFile('./js/db.json','utf-8',(err,data)=>{
+        console.log(req);
         let content = JSON.parse(data);
         if(err){
             res.status(500).send('server error');
         }
         else {
             try {
-                fs.readFile('./db.json','utf-8',async (err,data)=>{
+                fs.readFile('./js/db.json','utf-8',async (err,data)=>{
                     if(err){
                         res.status(500).send('Server error');
                     }
@@ -67,7 +69,7 @@ app.post('/register',(req,res)=>{
                 console.log('stop');
             }
         }
-    })
+    })*/
 })
 
 app.post('/login',(req,res)=>{

@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/font.css">
     <title>Register</title>
 </head>
 <body> 
     <div class="app">
+
+        <div class="triangle-wrapper">
+            <div class="triangle"></div>
+            <div class="triangle"></div>
+        </div>
+
         <div class="mobile-navbar">
             <i class="mobile-navbar__quit-btn fas fa-times"></i> 
             <nav class="mobile-navbar-links">
-                <a class="mobile-navbar__link" href="/">Accueil</a>
-                <a class="mobile-navbar__link" href="/register">S'inscrire</a>
-                <a class="mobile-navbar__link" href="/login">Se connecter</a>
-                <a class="mobile-navbar__link" href="mail-to:nagelkilian05@gmail.com">Contact</a>
+                <a class="mobile-navbar__link fs-text" href="/">Accueil</a>
+                <a class="mobile-navbar__link fs-text" href="/register">S'inscrire</a>
+                <a class="mobile-navbar__link fs-text" href="/login">Se connecter</a>
+                <a class="mobile-navbar__link fs-text" href="mail-to:nagelkilian05@gmail.com">Contact</a>
             </nav>
         </div>
+
         <div class="navbar">
             <ul class="navbar__items">
                 <h2 class="navbar__item navbar__logo">LFD</h2>
                 <nav class="navbar__item navbar__links">
-                    <a class="navbar__link" href="/">Accueil</a>
-                    <a class="navbar__link" href="/register">S'inscrire</a>
-                    <a class="navbar__link" href="/login">Se connecter</a>
-                    <a class="navbar__link" href="mailto:nagelkilian05@gmail.com">Contact</a>
+                    <a class="navbar__link fs-text" href="/">Accueil</a>
+                    <a class="navbar__link fs-text" href="/register">S'inscrire</a>
+                    <a class="navbar__link fs-text" href="/login">Se connecter</a>
+                    <a class="navbar__link fs-text" href="mailto:nagelkilian05@gmail.com">Contact</a>
                 </nav>
                 <div class="navbar__item navbar__icon">
                     <div class="navbar__icon-bar"></div>
@@ -34,17 +42,26 @@
                 </div>
             </ul>
         </div>
-        <header class="header">
-            <h1 class="header__title">S'inscrire</h1>
-        </header>
-        <form class="form" action="/register" method="post">
-            <label class="form__label" for="name">Name :</label><br>
-            <input class="form__input input"type="text" placeholder="your name" id="name" name="name" required><br>
-            <label class="form__label" for="password">Password :</label><br>
-            <input class="form__input input" type="password" placeholder="your password" id="password" name="password" required><br>
-            <button class="form__btn btn" type="submit">Submit</button>
-        </form>
-        <a href="/">Home</a>
+
+        <main>
+            <form class="form" action="/create" method="POST">
+                <div class="form__inner">
+                    <h2 class="form__title fs-header">S'inscrire</h2>
+                    <label class="form__label fs-text" for="name">Pseudo</label>
+                    <input class="form__input input" type="text" placeholder="pseudonyme" id="name" name="name" required>
+                    <label class="form__label fs-text" for="password">Mot de passe</label>
+                    <input class="form__input input" type="password" placeholder="password" id="password" name="password" required>
+                    <button class="form__btn btn fs-text" type="submit">confirmer</button>
+                </div>
+            </form>
+            <div class="showcase">
+                <div class="showcase__inner">
+                    <h2 class="showcase__title fs-header">Light Fight of Darkness</h2>
+                    <p class="showcase__text fs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam magnam, unde minima quibusdam aut fugit ipsam id perspiciatis dignissimos cum quod quo enim ratione sunt maiores officia voluptas! Eius, vero.</p>
+                </div>
+            </div>
+        </main>
+
     </div>
 </body>
 </html>
