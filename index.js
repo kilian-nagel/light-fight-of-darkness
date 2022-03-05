@@ -31,6 +31,11 @@ app.get('/login',(req,res)=>{
 })
 
 app.post('/create',(req,res)=>{
+    try {
+    console.log(req.body.name);
+    } catch(error) {
+        console.log(error);
+    }
     /*
     fs.readFile('./js/db.json','utf-8',(err,data)=>{
         console.log(req);
