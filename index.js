@@ -1,10 +1,10 @@
 
-let express = require('express');
+let db = require('./js/db.json');
+let body_parser = require('body-parser');
 let bcrypt = require('bcrypt');
 let fs = require('fs');
-let body_parser = require('body-parser');
-let db = require('./js/db.json');
-
+let express = require('express');
+let app = express();
 
 /* General functions
 ================ */
@@ -14,12 +14,13 @@ let db = require('./js/db.json');
 /* App
 =============== */
 
-let app = express();
-app.use(body_parser.urlencoded({extended:false}));
+
+app.use(express.static(__dirname));
+app.use(body_parser.urlencoded({extended:false}))
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    res.render('index.ejs');
+    res.render('index.ejs',{text:'Welcome'});
 })
 
 app.get('/register',(req,res)=>{
@@ -31,14 +32,8 @@ app.get('/login',(req,res)=>{
 })
 
 app.post('/create',(req,res)=>{
-    try {
-    console.log(req.body.name);
-    } catch(error) {
-        console.log(error);
-    }
-    /*
     fs.readFile('./js/db.json','utf-8',(err,data)=>{
-        console.log(req);
+        console.log(data);
         let content = JSON.parse(data);
         if(err){
             res.status(500).send('server error');
@@ -47,12 +42,13 @@ app.post('/create',(req,res)=>{
             try {
                 fs.readFile('./js/db.json','utf-8',async (err,data)=>{
                     if(err){
-                        res.status(500).send('Server error');
+                        res.status(500).send(err);
+                        console.log(err);
                     }
-                    content = JSON.parse(data);
                     isUserExisting = content.find(user=>{
                         return user.name == req.body.name;
                     })
+                    console.log('aaa')
                     if(!isUserExisting){
                         let new_content = {name:req.body.name,password:req.body.password}
 
@@ -62,7 +58,7 @@ app.post('/create',(req,res)=>{
 
                         content.push(new_content)
                         content = JSON.stringify(content);
-                        fs.writeFile('./db.json',content,(err)=>{
+                        fs.writeFile('./js/db.json',content,(err)=>{
                             res.status(400).send();
                         });
                         res.status(201).send();
@@ -74,11 +70,11 @@ app.post('/create',(req,res)=>{
                 console.log('stop');
             }
         }
-    })*/
+    })
 })
 
 app.post('/login',(req,res)=>{
-    fs.readFile('./db.json',async (err,data)=>{
+    fs.readFile('./js/db.json',async (err,data)=>{
         let content = JSON.parse(data);
         let user = content.find(user=>{
             return user.name == req.body.name;

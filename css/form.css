@@ -177,6 +177,7 @@ body {
 .form__title {
     font-weight:400;
     padding-bottom: var(--padding-0-5);
+    text-align: center;
 }
 
 .form__inner {
@@ -257,6 +258,15 @@ main {
 
 /* RESPONSIVE
 =============== */
+
+@media screen and (max-width:1268px){
+    .form {
+        flex-basis: 100%;
+    }
+    .showcase {
+        display:none;
+    }
+}
 
 @media screen and (max-width:768px){
     .navbar__links {display: none;}
